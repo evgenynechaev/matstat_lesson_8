@@ -2,10 +2,6 @@
 import numpy as np
 from scipy import stats
 
-# footballers_list = [70, 50, 65, 60, 75]
-# hockey_players_list = [80, 75, 90, 70, 75, 65, 85, 100]
-# weightlifters_list = [130, 100, 140, 150, 160, 170, 200]
-
 
 footballers_list = [173, 175, 180, 178, 177, 185, 183, 182]
 hockey_players_list = [177, 179, 180, 188, 177, 172, 171, 184, 180]
@@ -57,6 +53,7 @@ def task_1():
     hockey_players_y_mean = hockey_players_sum / hockey_players_n
     weightlifters_y_mean = weightlifters_sum / weightlifters_n
     total_y_mean = total_sum / total_n
+    print(f"Решение:")
     print(f"    среднее значение выборок:")
     print(f"        футболистов = {footballers_y_mean:.4f}")
     print(f"        хоккеистов = {hockey_players_y_mean:.4f}")
@@ -90,6 +87,7 @@ def task_1():
     print(f"    df_межд (v1) = {k - 1}")
     print(f"    df_внутр (v2) = {total_n - k}")
     f_crit_a_0_05 = 3.3852
+    print()
     print(f"    Критическое значение распределения Фишера")
     print(f"    для v1={k - 1}, v2={total_n - k}, alpha=0.05: Fкрит={f_crit_a_0_05}")
     if f_n > f_crit_a_0_05:
@@ -102,6 +100,7 @@ def task_1():
         print(f"    Различие между группами статистически не значимое для уровня значимости alpha = 0.05.")
     print()
     f_crit_a_0_01 = 5.57
+    print(f"    Критическое значение распределения Фишера")
     print(f"    для v1={k - 1}, v2={total_n - k}, alpha=0.01: Fкрит={f_crit_a_0_01}")
     if f_n > f_crit_a_0_01:
         print(f"Вывод 2:")
